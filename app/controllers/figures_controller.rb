@@ -17,7 +17,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.find_or_create_by(name: params[:figure][:name])
-
+    binding.pry
     if !params[:figure][:title_ids].empty?
       @figure.title_ids = params[:figure][:title_ids]
     elsif !params[:title][:name].nil?
@@ -26,7 +26,7 @@ class FiguresController < ApplicationController
       @title.figure = @figure
     end
 
-    if !(params[:figure][:landmark_ids].nil?)
+    if !params[:figure][:landmark_ids].nil?
       @figure.landmark_ids = params[:figure][:landmark_ids]
     elsif !params[:landmark][:name].nil?
       binding.pry
