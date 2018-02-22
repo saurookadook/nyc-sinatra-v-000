@@ -1,4 +1,5 @@
-<h1>Enter a new figure:</h1>
+
+<h1>Enter a new figure: </h1>
 <form method="POST" action="/figures">
   <h2>Name: <input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>"></h2><br>
   <h3>Choose from the existing titles or create a new one:</h3><br>
@@ -16,5 +17,5 @@
   <p>New landmark: <input type="text" name="landmark[name]" id="new_landmark"></p><br>
   <p>Year completed: <input type="text" name="landmark[year_completed]"></p><br>
 
-  <input type="submit" value="Create New Figure">
+  <input type="submit" value="Edit Figure">
 </form>
