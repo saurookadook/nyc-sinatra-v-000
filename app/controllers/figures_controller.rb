@@ -24,6 +24,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
+    binding.pry
     @figure = Figure.create(params[:figure])
     @landmark = Landmark.find_by(params[:landmark])
     !@landmark ? @figure.landmarks << Landmark.create(params[:landmark]) : @figure.landmarks << @landmark
