@@ -4,7 +4,7 @@
   <h3>Choose from the existing titles or create a new one:</h3><br>
     <% @titles.each do |title| %>
       <label><%= title.name %></label>
-      <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>">
+      <input type="radio" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>">
     <% end %>
   <p>New title: <input type="text" name="title[name]" id="new_title"></p><br>
 
