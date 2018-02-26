@@ -11,7 +11,7 @@
   <h3>Choose from the existing landmarks or create a new one:</h3><br>
     <% @landmarks.each do |landmark| %>
       <label><%= landmark.name %></label>
-      <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>">
+      <input type="radio" name="figure[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>">
     <% end %>
   <p>New landmark: <input type="text" name="landmark[name]" id="new_landmark"></p><br>
   <p>Year completed: <input type="text" name="landmark[year_completed]"></p><br>
